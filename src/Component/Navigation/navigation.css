@@ -1,0 +1,50 @@
+.mainNavigation {
+	width: 100%;
+	height: 4.5rem;
+	background-color: #ede9fe;
+	margin-bottom: 2rem;
+}
+.mainNavigation nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.mainNavigation ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.mainNavigation li {
+	margin: 0 1rem;
+}
+.mainNavigation a {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	display: block;
+	border-radius: 5px;
+}
+.mainNavigation a:hover,
+.activeLink {
+	color: #a855f7;
+	background-color: #fff;
+}
+.testL{
+	display: flex;
+	align-items: center;
+  position: relative;
+}
+.mainNavigation span {
+	background-color: #a855f7;
+  color: #fff;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -5px;
+	right: -10px;
+}

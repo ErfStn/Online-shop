@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Erfan",
+      "email": "erfan@gmail.com",
+      "number": "09381257830",
+      "password": "Erfan1234!",
+      "cofirmPassword": "Erfan1234!",
+      "gender": "male",
+      "nationality": "IR",
+      "intrests": [],
+      "terms": false
+    }
+  ]
+}
