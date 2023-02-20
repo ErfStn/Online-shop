@@ -1,15 +1,17 @@
+import { toast } from "react-toastify";
 import { useCart, useCartActions } from "../context/provider";
 import * as data from "../data";
 import Layout from "../Layout/Layout";
+import checkInCart from "../Utils/checkInCart";
 
 const HomePage = () => {
-	const cart = useCart()
+	const { cart } = useCart();
 	const dispatch = useCartActions();
 	const addProductHandler = product => {
 		dispatch({ type: "ADD_TO_CART", payload: product });
-		// console.log(product);
-	};
 
+		toast.success(`${product.name} added to cart!`);
+	};
 	return (
 		<Layout>
 			<h2>Online Shop</h2>
@@ -30,7 +32,7 @@ const HomePage = () => {
 											addProductHandler(product);
 										}}
 									>
-										add to cart
+										{checkInCart(cart, product) ? "in cart" : "add to cart"}
 									</button>
 								</div>
 							</section>

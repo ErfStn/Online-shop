@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
+	margin-top: 6rem;
 }
 * {
 	box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 .productList {
 	display: flex;
@@ -52,7 +54,7 @@ body {
 	background-color: #ede9fe;
 	color: #6d28d9;
 	cursor: pointer;
-}
+text-decoration: none;}
 .primary {
 	background-color: #6d28d9;
 	color: #fff;

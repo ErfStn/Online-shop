@@ -1,0 +1,35 @@
+form {
+	height: auto;
+	width: 30rem;
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+form button {
+	color: blueviolet;
+	background-color: rgb(244, 238, 250);
+	border: 1px solid blueviolet;
+	border-radius: 5px;
+	padding: 8px;
+	outline: none;
+	margin: .5rem 0;
+	cursor: pointer;
+	width: 100%;
+}
+form button:disabled {
+	border: 1px solid #999999;
+	background-color: #cccccc;
+	color: #666666;
+	cursor: auto;
+}
+form button:focus {
+	border: 2px solid blueviolet;
+}
+form a{
+	margin: 5px 0;
+}
+form p {
+	font-size: 14px;
+	color: red;
+}

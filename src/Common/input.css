@@ -1,0 +1,30 @@
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="email"],
+select {
+	padding: 8px 6px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+.formControl {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+	margin-bottom: 8px;
+}
+.formControl input:focus,
+select:focus {
+	border: 2px solid blueviolet;
+}
+.formControl label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.error {
+	color: red;
+	margin: 5px 0 0 5px;
+	font-size: 12px;
+}
