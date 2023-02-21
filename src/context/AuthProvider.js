@@ -11,9 +11,10 @@ function AuthProvider({ children }) {
 	useEffect(() => {
 		const userData =
 			JSON.parse(localStorage.getItem(LOCAL_STORAGE_AUTH_KEY)) || false;
-		setState(userData);
+		if (userData) {
+			setState(userData);
+		}
 	}, []);
-
 	useEffect(() => {
 		const data = JSON.stringify(state);
 		localStorage.setItem(LOCAL_STORAGE_AUTH_KEY, data);
@@ -32,4 +33,3 @@ export default AuthProvider;
 
 export const useAuth = () => useContext(AuthProviderContext);
 export const useAuthActions = () => useContext(AuthProviderContextDispatcher);
-

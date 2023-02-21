@@ -5,11 +5,21 @@ import Input from "../../Common/Input";
 import "./formStyle.css";
 import { toast } from "react-toastify";
 import { loginUser } from "../../Servises/loginServices";
-import { useAuthActions } from "../../context/AuthProvider";
+import { useAuth, useAuthActions } from "../../context/AuthProvider";
+import useQuerry from "../../Hooks/querry";
+import { useEffect } from "react";
 
 const LoginForm = () => {
 	const navigate = useNavigate();
 	const setAuth = useAuthActions();
+	const userData = useAuth();
+	const querry = useQuerry();
+	const redirect = querry.get("redirect") || "/";
+
+	useEffect(() => {
+		if (userData) navigate(redirect);
+	}, [redirect, userData]);
+
 	const initialValues = {
 		email: "",
 		password: "",
@@ -19,7 +29,7 @@ const LoginForm = () => {
 		try {
 			const { data } = await loginUser(values);
 			setAuth(data);
-			navigate("/");
+			navigate("/" + redirect);
 		} catch (error) {
 			if (error.response && error.response.data.message) {
 				toast.error(`${error.response.data.message}`, {
@@ -27,7 +37,6 @@ const LoginForm = () => {
 				});
 			}
 		}
-		console.log(values);
 	};
 
 	const validationSchema = yup.object({
@@ -56,7 +65,9 @@ const LoginForm = () => {
 				<button type="submit" className="btn primary">
 					Log in
 				</button>
-				<Link to="/signup">Don't have an account yet?</Link>
+				<Link to={`/signup?redirect=${redirect}`}>
+					Don't have an account yet?
+				</Link>
 			</form>
 		</div>
 	);

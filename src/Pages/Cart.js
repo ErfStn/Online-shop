@@ -83,12 +83,9 @@ const CartSummery = ({ total, cart }) => {
 				<p>total price</p>
 				<p>{total}$</p>
 			</div>
-			<NavLink
-				to="/cart/checkout"
-				className="btn primary "
-			>
+			<Link to="/signup?redirect=/checkout" className="btn primary ">
 				Checkout
-			</NavLink>
+			</Link>
 		</section>
 	);
 };

@@ -5,13 +5,21 @@ import { Link, useNavigate } from "react-router-dom";
 import "./formStyle.css";
 import { signupUser } from "../../Servises/signupServices";
 import { toast } from "react-toastify";
-import { useAuthActions } from "../../context/AuthProvider";
+import { useAuth, useAuthActions } from "../../context/AuthProvider";
+import useQuerry from "../../Hooks/querry";
+import { useEffect } from "react";
 
 const SignupForm = () => {
 	// const [error, setError] = useState(null);
 	const navigate = useNavigate();
-
 	const setAuth = useAuthActions();
+	const userData = useAuth();
+	const querry = useQuerry();
+	const redirect = querry.get("redirect") || "/";
+
+	useEffect(() => {
+		if (userData) navigate(redirect);
+	}, [redirect, userData]);
 
 	const initialValues = {
 		id: "",
@@ -54,7 +62,7 @@ const SignupForm = () => {
 		try {
 			const { data } = await signupUser(userData);
 			setAuth(data);
-			navigate("/");
+			navigate("/" + redirect);
 		} catch (error) {
 			if (error.response && error.response.data.message) {
 				toast.error(`${error.response.data.message}`, {
@@ -102,7 +110,9 @@ const SignupForm = () => {
 				>
 					Sign in
 				</button>
-				<Link to="/login">Allready have an account?</Link>
+				<Link to={`/login?redirect=${redirect}`}>
+					Allready have an account?
+				</Link>
 			</form>
 		</div>
 	);
