@@ -26,11 +26,11 @@ const CartPage = () => {
 			<div className="cart-page">
 				<section className="cartItemList">
 					<div className="cartheader">
-						<div></div>
+						{/* <div></div> */}
 						<div>Name</div>
-						<div>Off Price</div>
+						<div>Price</div>
 						<div>Quantity</div>
-						<div>Total Price</div>
+						<div>Total</div>
 					</div>
 					{cart.map(item => (
 						<div key={item.id} className="itemList">
@@ -83,7 +83,7 @@ const CartSummery = ({ total, cart }) => {
 				<p>total price</p>
 				<p>{total}$</p>
 			</div>
-			<Link to="/signup?redirect=/checkout" className="btn primary ">
+			<Link to="/login?redirect=/checkout" className="btn primary ">
 				Checkout
 			</Link>
 		</section>

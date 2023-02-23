@@ -47,7 +47,7 @@ const Checkout = () => {
 							<p>total price</p>
 							<p>{total}$</p>
 						</div>
-						<Link to="/signup?redirect=/checkout" className="btn primary ">
+						<Link to="/" className="btn primary ">
 							Buy
 						</Link>
 					</section>

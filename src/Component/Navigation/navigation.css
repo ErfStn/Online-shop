@@ -25,6 +25,7 @@
 	height: 100%;
 }
 
+
 .mainNavigation a {
 	text-decoration: none;
 	margin: .5rem 1rem;
@@ -33,7 +34,8 @@
 	font-size: 16px;
 	font-weight: bold;
 	display: flex;
-	align-items: center;
+	align-items: center;	
+
 }
 .mainNavigation a:hover,
 .activeLink {
@@ -56,9 +58,22 @@
 	font-size: 12px;
 	position: absolute;
 	top: 1px;
-	right: 1px;
+	right: 8px;
 }
 .mainNavigation a img {
 	width: 75px;
 	height: auto;
+}
+
+@media (max-width:768px){
+	.mainNavigation {
+		height: 4rem;
+	}
+.mainNavigation a {
+	font-size: 16px;
+}
+.mainNavigation a img {
+	width: 60px;
+}
+
 }

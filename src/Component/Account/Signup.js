@@ -62,7 +62,7 @@ const SignupForm = () => {
 		try {
 			const { data } = await signupUser(userData);
 			setAuth(data);
-			navigate("/" + redirect);
+			navigate(redirect);
 		} catch (error) {
 			if (error.response && error.response.data.message) {
 				toast.error(`${error.response.data.message}`, {
