@@ -110,9 +110,7 @@ const SignupForm = () => {
 				>
 					Sign in
 				</button>
-				<Link to={`/login?redirect=${redirect}`}>
-					Allready have an account?
-				</Link>
+				<Link to={`/login?redirect=${redirect}`}>Already have an account?</Link>
 			</form>
 		</div>
 	);
