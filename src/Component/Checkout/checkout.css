@@ -1,13 +1,14 @@
 .checkoutPage {
 	display: flex;
+	justify-content: center;
 	align-items: start;
 	max-width: 1170px;
 	height: auto;
-	width: 100%;
+	width: 95vw;
 }
 .profilerDetail {
 	width: 70%;
-    height: 10rem;
+	height: 10rem;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -19,7 +20,7 @@
 }
 .cartDetail {
 	width: 25%;
-    height: auto;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -29,8 +30,8 @@
 	border-radius: 5px;
 	padding: 1rem;
 }
-.cartDetail a{
-    width: 100%;
+.cartDetail a {
+	width: 100%;
 }
 .summeryItem {
 	display: flex;
@@ -41,4 +42,19 @@
 .summeryItem.net {
 	border-top: 1px solid #ccc;
 	padding-top: 10px;
+}
+@media (max-width: 768px) {
+	.checkoutPage {
+		flex-direction: column;
+		min-width: 22rem;
+	}
+	.profilerDetail {
+		width: 100%;
+		margin-left: 0;
+		margin-bottom: 1rem;
+	}
+	.cartDetail {
+		width: 100%;
+		margin-left: 0;
+	}
 }

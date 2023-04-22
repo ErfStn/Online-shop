@@ -1,6 +1,7 @@
 .App {
 	text-align: center;
-margin: 5rem 0;}
+	margin: 5rem 0;
+}
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -65,13 +66,14 @@ body {
 	justify-content: space-evenly;
 	height: 20rem;
 	width: 20rem;
-border: 1px solid #ccc;
-border-radius: 5px;
-padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 1rem;
 }
 
-@media (max-width:768px){
-	.Toastify__toast--success ,.Toastify__toast--error{
-top: 3rem;
-}
+@media (max-width: 768px) {
+	.Toastify__toast--success,
+	.Toastify__toast--error {
+		top: 4rem;
+	}
 }

@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { Link, useNavigate } from "react-router-dom";
 import "./formStyle.css";
-import { signupUser } from "../../Servises/signupServices";
+import { signupUser } from "../../Services/signupServices";
 import { toast } from "react-toastify";
 import { useAuth, useAuthActions } from "../../context/AuthProvider";
 import useQuerry from "../../Hooks/querry";

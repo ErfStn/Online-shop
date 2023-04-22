@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Input from "../../Common/Input";
 import "./formStyle.css";
 import { toast } from "react-toastify";
-import { loginUser } from "../../Servises/loginServices";
+import { loginUser } from "../../Services/loginServices";
 import { useAuth, useAuthActions } from "../../context/AuthProvider";
 import useQuerry from "../../Hooks/querry";
 import { useEffect } from "react";
