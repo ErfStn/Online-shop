@@ -1,5 +1,5 @@
 # Online-shop
-build up with React.js and Css
+build up with React.js and CSS
 
 # Getting Started with Create React App
 
