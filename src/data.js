@@ -1,7 +1,7 @@
 export const products = [
 	{
 		id: 1,
-		name: "Winter body",
+		name: "Air Max",
 		description: [
 			{ support: "گارانتی مادام العمر" },
 			{ support: "ارسال رایگان" },
@@ -11,11 +11,11 @@ export const products = [
 		offPrice: 120,
 		discount: 0,
 		image:
-			"https://s6.uupload.ir/files/daniel-storek-jm-qked1gmi-unsplash_ja2.jpg",
+			"https://s6.uupload.ir/files/luis-felipe-lins-j2-waqdckus-unsplash_ku8a.jpg",
 	},
 	{
 		id: 2,
-		name: "Adidas",
+		name: "Air Force",
 		description: [
 			{ support: "گارانتی مادام العمر" },
 			{ support: "اورجینال" },
@@ -29,7 +29,7 @@ export const products = [
 	},
 	{
 		id: 3,
-		name: "Vans",
+		name: "Air Force Custom",
 		description: [
 			{ support: "گارانتی مادام العمر" },
 			{ support: "اورجینال" },
@@ -43,7 +43,7 @@ export const products = [
 	},
 	{
 		id: 4,
-		name: "White",
+		name: "Road Running",
 		description: [
 			{ support: "گارانتی مادام العمر" },
 			{ support: "اورجینال" },
@@ -56,7 +56,7 @@ export const products = [
 	},
 	{
 		id: 5,
-		name: "Croopped-shoe",
+		name: "New Balance",
 		description: [
 			{ support: "گارانتی مادام العمر" },
 			{ support: "اورجینال" },
@@ -70,7 +70,7 @@ export const products = [
 	},
 	{
 		id: 6,
-		name: "Blues",
+		name: "Adidas",
 		description: [
 			{ support: "گارانتی مادام العمر" },
 			{ support: "اورجینال" },
@@ -80,6 +80,6 @@ export const products = [
 		offPrice: 200,
 		discount: 13,
 		image:
-			"https://s6.uupload.ir/files/luis-felipe-lins-j2-waqdckus-unsplash_ku8a.jpg",
+			"https://s6.uupload.ir/files/daniel-storek-jm-qked1gmi-unsplash_ja2.jpg",
 	},
 ];

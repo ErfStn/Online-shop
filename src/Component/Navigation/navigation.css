@@ -25,20 +25,21 @@
 	height: 100%;
 }
 
-
 .mainNavigation a {
 	text-decoration: none;
-	margin: .5rem 1rem;
+	margin: 0.5rem 1rem;
 	display: block;
 	border-radius: 5px;
 	font-size: 16px;
 	font-weight: bold;
 	display: flex;
-	align-items: center;	
-
+	align-items: center;
 }
 .mainNavigation a:hover,
 .activeLink {
+	color: #6d28d9;
+}
+.navLink {
 	color: #6d28d9;
 }
 .testL {
@@ -65,15 +66,14 @@
 	height: auto;
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 	.mainNavigation {
 		height: 4rem;
 	}
-.mainNavigation a {
-	font-size: 16px;
-}
-.mainNavigation a img {
-	width: 60px;
-}
-
+	.mainNavigation a {
+		font-size: 16px;
+	}
+	.mainNavigation a img {
+		width: 60px;
+	}
 }
